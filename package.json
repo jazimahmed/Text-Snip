@@ -1,0 +1,22 @@
+{
+  "name": "textsnip",
+  "version": "1.0.0",
+  "description": "Screenshot Snipper + OCR Text Extractor Chrome Extension (MV3)",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.js --watch",
+    "build": "tsc --noEmit && node scripts/build.js",
+    "test": "node scripts/test-cropper.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.280",
+    "@types/node": "^22.8.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
+

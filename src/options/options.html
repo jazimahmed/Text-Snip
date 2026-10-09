@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextSnip Settings</title>
+  <link rel="stylesheet" href="./options.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="header">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/>
+          <path d="M9 9h6"/>
+          <path d="M12 9v6"/>
+          <circle cx="9" cy="9" r="1"/>
+          <circle cx="15" cy="9" r="1"/>
+        </svg>
+        <h1>TextSnip Settings</h1>
+      </div>
+      <p class="subtitle">Customize recognition, shortcuts, and appearance.</p>
+    </header>
+
+    <main class="settings-card">
+      <!-- OCR Language -->
+      <section class="setting-item">
+        <div class="setting-info">
+          <label for="ocr-language" class="setting-title">OCR Language</label>
+          <p class="setting-desc">Primary language model used for character recognition.</p>
+        </div>
+        <div class="setting-control">
+          <select id="ocr-language" class="select-input">
+            <option value="eng">English (Bundled Offline)</option>
+            <option value="tam" disabled>Tamil (Coming Soon)</option>
+            <option value="sin" disabled>Sinhala (Coming Soon)</option>
+            <option value="hin" disabled>Hindi (Coming Soon)</option>
+            <option value="ara" disabled>Arabic (Coming Soon)</option>
+          </select>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Auto Copy -->
+      <section class="setting-item">
+        <div class="setting-info">
+          <label for="auto-copy" class="setting-title">Automatically Copy OCR Text</label>
+          <p class="setting-desc">Immediately copy extracted text to your clipboard when OCR finishes.</p>
+        </div>
+        <div class="setting-control">
+          <label class="switch">
+            <input type="checkbox" id="auto-copy">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Show Preview -->
+      <section class="setting-item">
+        <div class="setting-info">
+          <label for="show-preview" class="setting-title">Show Screenshot Preview</label>
+          <p class="setting-desc">Display the cropped screenshot thumbnail inside the result dialog.</p>
+        </div>
+        <div class="setting-control">
+          <label class="switch">
+            <input type="checkbox" id="show-preview">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- Theme -->
+      <section class="setting-item">
+        <div class="setting-info">
+          <label for="theme-select" class="setting-title">Theme</label>
+          <p class="setting-desc">Select visual theme for the extension interface.</p>
+        </div>
+        <div class="setting-control">
+          <select id="theme-select" class="select-input">
+            <option value="system">System Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div id="save-toast" class="toast hidden">✓ Settings saved</div>
+      <p class="privacy-note">🔒 All screenshots and OCR processing run 100% locally in your browser. No data ever leaves your computer.</p>
+    </footer>
+  </div>
+  <script type="module" src="./options.ts"></script>
+</body>
+</html>
+
